@@ -4,7 +4,7 @@
   <groupId>com.example</groupId>
   <artifactId>myApp</artifactId>
   <version>ex_1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
   <name>MyApp Web service Application</name>
   <description>Rest web services</description>
   <parent>
