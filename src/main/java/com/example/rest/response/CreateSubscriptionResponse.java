@@ -8,7 +8,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
  */
 public class CreateSubscriptionResponse extends SubscriptionResponse {
 
-    private final String accountIdentifier;
+    private String accountIdentifier;
 
     public CreateSubscriptionResponse(final String accountIdentifier) {
         super(true, null);
@@ -18,6 +18,11 @@ public class CreateSubscriptionResponse extends SubscriptionResponse {
     public CreateSubscriptionResponse(final String accountIdentifier, final String message) {
         super(true, message);
         this.accountIdentifier = accountIdentifier;
+    }
+
+    private CreateSubscriptionResponse() {
+        // For json
+        super();
     }
 
     /**

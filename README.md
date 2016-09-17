@@ -25,7 +25,7 @@ To add user:
 
 HTTP Method: POST 
 
-URL: http://localhost:8080/users/add
+URL: http://146.148.51.70:8080/users/add
 
 
 Sample request: {"firstName":"Bob", "lastName":"Builder"}
@@ -35,21 +35,21 @@ To query user using firstName and lastName
 
 HTTP Method: GET
 
-URL: http://localhost:8080/users?firstName=Bob&lastName=Builder
+URL: http://146.148.51.70:8080/users?firstName=Bob&lastName=Builder
 
 
 To query user using id
 
 HTTP Method: GET
 
-URL: http://localhost:8080/users/id/{id}
+URL: http://146.148.51.70:8080/users/id/{id}
 
 
 To update a user
 
 HTTP Method: PUT
 
-URL: http://localhost:8080/users/id/{id}
+URL: http://146.148.51.70:8080/users/id/{id}
 
 Sample request: {"firstName":"Bob", "lastName":"Builder"}
 
@@ -58,7 +58,7 @@ To delete a user
 
 HTTP Method: DELETE
 
-URL: http://localhost:8080/users/id/{id}
+URL: http://146.148.51.70:8080/users/id/{id}
 
 
 
@@ -67,15 +67,15 @@ Details about subscription operations:
 
 To create a subscription:
 
-HTTP Method: POST 
+HTTP Method: GET 
 
-URL: http://localhost:8080/api/notification/subscription/create?eventUrl={urlValue}
+URL: http://146.148.51.70:8080/subscription/create?eventUrl={urlValue}
 
 
 To cancel a subscription:
 
-HTTP Method: POST 
+HTTP Method: GET 
 
-URL: http://localhost:8080/api/notification/subscription/cancel?eventUrl={urlValue}
+URL: http://146.148.51.70:8080/subscription/cancel?eventUrl={urlValue}
 
 

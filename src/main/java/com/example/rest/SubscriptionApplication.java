@@ -3,7 +3,7 @@ package com.example.rest;
 import java.util.UUID;
 import java.util.logging.Logger;
 
-import javax.ws.rs.POST;
+import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
@@ -24,7 +24,7 @@ import com.example.rest.response.SubscriptionResponse;
 /**
  * Application class to perform various operations on subscription
  */
-@Path(value = "/api/notification/subscription")
+@Path(value = "/subscription")
 @Component
 public class SubscriptionApplication {
 
@@ -38,7 +38,7 @@ public class SubscriptionApplication {
      * @param url eventUrl
      * @return
      */
-    @POST
+    @GET
     @Produces("application/json")
     @Path(value = "/create")
     public Response createSubscription(@QueryParam(EVENT_URL) final String url) {
@@ -59,7 +59,7 @@ public class SubscriptionApplication {
      * @param url eventUrl
      * @return
      */
-    @POST
+    @GET
     @Produces("application/json")
     @Path(value = "/cancel")
     public Response cancelSubscription(@QueryParam(EVENT_URL) final String url) {

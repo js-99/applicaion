@@ -5,7 +5,7 @@ package com.example.rest.response;
  */
 public class ErrorResponse extends SubscriptionResponse {
 
-    private final ErrorCode errorCode;
+    private ErrorCode errorCode;
 
     public ErrorResponse(final ErrorCode errorCode, final String message) {
         super(false, message);
@@ -15,6 +15,11 @@ public class ErrorResponse extends SubscriptionResponse {
     public ErrorResponse(final ErrorCode errorCode) {
         super(false, null);
         this.errorCode = errorCode;
+    }
+
+    private ErrorResponse() {
+        // For Json
+        super();
     }
 
     /**

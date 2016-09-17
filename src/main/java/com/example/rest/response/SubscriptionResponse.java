@@ -5,9 +5,9 @@ package com.example.rest.response;
  */
 public abstract class SubscriptionResponse {
 
-    private final boolean success;
+    private boolean success;
 
-    private final String message;
+    private String message;
 
     /**
      * If the response is successful
@@ -15,6 +15,10 @@ public abstract class SubscriptionResponse {
     public SubscriptionResponse(final boolean success, final String message) {
         this.success = success;
         this.message = message;
+    }
+
+    protected SubscriptionResponse() {
+        // For json
     }
 
     /**
