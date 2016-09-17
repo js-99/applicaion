@@ -4,7 +4,7 @@ This project includes 2 parts.
 First part includes CRUD operations on user using jersey framework. Second part includes create and cancel operation on subscriptions.
 
 
-The project has been implemented using spring-boot, Version 1.4.0.RELEASE.
+The project has been implemented using spring-boot, Version 1.3.6.RELEASE.
  
 Java8 is required for this application.
  
