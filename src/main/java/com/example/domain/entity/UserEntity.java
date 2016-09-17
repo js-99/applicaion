@@ -1,6 +1,9 @@
 package com.example.domain.entity;
 
 import java.util.Date;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 
 /**
  * User entity
@@ -28,6 +31,10 @@ public class UserEntity {
     public UserEntity(final String firstName, final String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
+    }
+
+    private UserEntity() {
+        // For tests
     }
 
     public long getId() {
@@ -74,6 +81,16 @@ public class UserEntity {
 
     public void setUpdatedDate(final Date updatedDate) {
         this.updatedDate = updatedDate;
+    }
+
+    @Override
+    public boolean equals(final Object obj) {
+        return EqualsBuilder.reflectionEquals(obj, this);
+    }
+
+    @Override
+    public int hashCode() {
+        return HashCodeBuilder.reflectionHashCode(this);
     }
 
 }

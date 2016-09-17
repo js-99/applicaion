@@ -10,6 +10,14 @@ Java8 is required for this application.
  
 It uses H2 database.
 
+To run the application:
+
+mvn spring-boot:run
+
+OR
+
+java -jar tmp/myApp-ex_1.0-SNAPSHOT.war
+
 
 Details about User operations:
 
@@ -61,13 +69,13 @@ To create a subscription:
 
 HTTP Method: POST 
 
-URL: http://localhost:8888/api/notification/subscription/create?eventUrl={urlValue}
+URL: http://localhost:8080/api/notification/subscription/create?eventUrl={urlValue}
 
 
 To cancel a subscription:
 
 HTTP Method: POST 
 
-URL: http://localhost:8888/api/notification/subscription/cancel?eventUrl={urlValue}
+URL: http://localhost:8080/api/notification/subscription/cancel?eventUrl={urlValue}
 
 

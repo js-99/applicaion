@@ -24,11 +24,11 @@ public class UserValidator {
      */
     public static void validate(final String firstName, final String lastName) throws UserValidationException {
 
-        if (!StringUtils.isEmpty(firstName)) {
+        if (StringUtils.isEmpty(firstName)) {
             logger.severe("First name cannot be empty.");
             throw new UserValidationException("First name cannot be empty.");
         }
-        if (!StringUtils.isEmpty(lastName)) {
+        if (StringUtils.isEmpty(lastName)) {
             logger.severe("Last name cannot be empty.");
             throw new UserValidationException("Last name cannot be empty.");
         }

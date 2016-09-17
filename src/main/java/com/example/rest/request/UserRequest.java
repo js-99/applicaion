@@ -8,21 +8,10 @@ import org.apache.commons.lang3.builder.ToStringStyle;
  */
 public class UserRequest {
 
-    private final String firstName;
+    private String firstName;
 
-    private final String lastName;
-
-    public UserRequest(final String firstName, final String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-
-    private UserRequest() {
-        this.firstName = null;
-        this.lastName = null;
-        // for json
-    }
-
+    private String lastName;   
+    
     /**
      * @return the firstName
      */
@@ -37,6 +26,21 @@ public class UserRequest {
         return lastName;
     }
 
+    /**
+     * @param firstName the firstName to set
+     */
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    
+    /**
+     * @param lastName the lastName to set
+     */
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    
     @Override
     public String toString() {
         return ToStringBuilder.reflectionToString(this, ToStringStyle.SHORT_PREFIX_STYLE);
